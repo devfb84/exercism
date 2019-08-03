@@ -2,15 +2,16 @@
 package luhn
 
 import (
-  "unicode"
+	"unicode"
 )
 
+//Valid validates than a number is valid per the Luhn formula
 func Valid(input string) bool {
-  if len(input) <=1{
-    return false
-  }
+	if len(input) <= 1 {
+		return false
+	}
 
-  digits := []rune(input)
+	digits := []rune(input)
 	validCount := 0
 	sum := 0
 
@@ -19,12 +20,12 @@ func Valid(input string) bool {
 			continue
 		}
 
-		if !unicode.IsDigit(digits[i]) {
+		if digits[i] < '0' || digits[i] > '9' {
 			return false
 		}
 
 		sum += checksum(validCount, toInt(digits[i]))
-		validCount += 1
+		validCount++
 	}
 
 	return validCount > 1 && sum%10 == 0
