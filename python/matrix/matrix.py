@@ -8,8 +8,10 @@ class Matrix(object):
                 row.append(int(word))
             self.matrix.append(row)
 
+        self.columns = [*zip(*self.matrix)]
+
     def row(self, index):
         return self.matrix[index-1]
 
     def column(self, index):
-        return list([*zip(*self.matrix)][index-1])
+        return list(self.columns[index-1])
