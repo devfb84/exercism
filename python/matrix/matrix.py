@@ -1,13 +1,6 @@
 class Matrix(object):
     def __init__(self, matrix_string):
-        self.matrix = []
-
-        for line in matrix_string.splitlines():
-            row = []
-            for word in line.split():
-                row.append(int(word))
-            self.matrix.append(row)
-
+        self.matrix = [[int(word) for word in line.split()] for line in matrix_string.splitlines()]
         self.columns = [*zip(*self.matrix)]
 
     def row(self, index):
