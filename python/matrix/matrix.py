@@ -4,7 +4,7 @@ class Matrix(object):
         self.columns = [*zip(*self.matrix)]
 
     def row(self, index):
-        return self.matrix[index-1]
+        return list(self.matrix[index-1])
 
     def column(self, index):
         return list(self.columns[index-1])
