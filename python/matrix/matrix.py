@@ -12,4 +12,4 @@ class Matrix(object):
         return self.matrix[index-1]
 
     def column(self, index):
-        return [[self.matrix[j][i] for j in range(len(self.matrix))] for i in range(len(self.matrix[0]))][index-1]
+        return list([*zip(*self.matrix)][index-1])
