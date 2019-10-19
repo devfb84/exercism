@@ -1,5 +1,5 @@
 
-factors_raindrop_sound = {
+FACTORS_RAINDROP_SOUND = {
     3: 'Pling',
     5: 'Plang',
     7: 'Plong'
@@ -7,10 +7,7 @@ factors_raindrop_sound = {
 
 
 def convert(number):
-    result = []
+    result = [sound for factor, sound in FACTORS_RAINDROP_SOUND.items()
+              if number % factor == 0]
 
-    for factor, sound in factors_raindrop_sound.items():
-        if number % factor == 0:
-            result.append(sound)
-
-    return ''.join(result) if len(result) > 0 else str(number)
+    return ''.join(result) or str(number)
