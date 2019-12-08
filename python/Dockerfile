@@ -1,9 +1,10 @@
 FROM python:3
 LABEL maintainer="devfb"
 
-RUN pip install pytest
-
 WORKDIR /src
+COPY requirements.txt /src/.
+RUN pip install -r requirements.txt
+
 COPY hamming /src/.
 COPY hello-world /src/.
 COPY high-scores /src/.
