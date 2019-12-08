@@ -10,6 +10,7 @@ COPY hello-world /src/.
 COPY high-scores /src/.
 COPY isogram /src/.
 COPY matrix /src/.
+COPY pangram /src/.
 COPY raindrops /src/.
 COPY twelve-days /src/.
 COPY two-fer /src/.
