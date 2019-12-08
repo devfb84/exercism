@@ -10,6 +10,7 @@ COPY high-scores /src/.
 COPY isogram /src/.
 COPY matrix /src/.
 COPY raindrops /src/.
+COPY twelve-days /src/.
 COPY two-fer /src/.
 
 CMD ["pytest", "-vs"]
