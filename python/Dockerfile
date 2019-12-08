@@ -12,6 +12,7 @@ COPY isogram /src/.
 COPY matrix /src/.
 COPY pangram /src/.
 COPY raindrops /src/.
+COPY reverse-string /src/.
 COPY twelve-days /src/.
 COPY two-fer /src/.
 
