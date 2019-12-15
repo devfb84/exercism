@@ -5,6 +5,7 @@ WORKDIR /src
 COPY requirements.txt /src/.
 RUN pip install -r requirements.txt
 
+COPY bob /src/.
 COPY hamming /src/.
 COPY hello-world /src/.
 COPY high-scores /src/.
