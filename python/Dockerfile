@@ -10,6 +10,7 @@ COPY hamming /src/.
 COPY hello-world /src/.
 COPY high-scores /src/.
 COPY isogram /src/.
+COPY leap /src/.
 COPY matrix /src/.
 COPY pangram /src/.
 COPY raindrops /src/.
