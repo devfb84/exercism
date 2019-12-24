@@ -5,9 +5,4 @@ dna_to_rna = {"G": "C",
 
 
 def to_rna(dna_strand):
-    rna = []
-
-    for char in dna_strand:
-        rna.append(dna_to_rna[char])
-
-    return "".join(rna)
+    return dna_strand.translate(str.maketrans(dna_to_rna))
