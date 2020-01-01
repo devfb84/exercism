@@ -5,12 +5,12 @@ GIFTS = ["and a Partridge in a Pear Tree.", "two Turtle Doves", "three French He
          "nine Ladies Dancing", "ten Lords-a-Leaping", "eleven Pipers Piping", "twelve Drummers Drumming"]
 
 
-def make_verse(start_verse):
-    day = CARDINALS[start_verse]
+def make_verse(verse_number):
+    day = CARDINALS[verse_number]
     first_part = f"On the {day} day of Christmas my true love gave to me: "
-    rest = ", ".join(reversed(GIFTS[:start_verse + 1]))
+    rest = ", ".join(reversed(GIFTS[:verse_number + 1]))
     verse = first_part + rest
-    if start_verse == 0:
+    if verse_number == 0:
         verse = verse.replace('and ', '')
     return verse
 
